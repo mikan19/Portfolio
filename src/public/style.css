@@ -127,6 +127,7 @@ height: 200px;
   bottom: 15px;
 }
 
+
 /* Hamburger Menu Animation Start */
 .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
