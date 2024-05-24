@@ -1,0 +1,245 @@
+
+
+body {
+  margin: 0;
+  font-family: "Futura", Helvetica, sans-serif;
+  background-color: #251F57;
+
+}
+
+
+/* Navbar & Navmenu color */
+/* :root {
+  --background-navbar: rgba(55, 55, 55, 0.98);
+} */
+
+header {
+  background: var(--background-navbar);
+  position: fixed;
+  width: 100%;
+  height: 52px;
+  background-color:#EFAEEC;
+}
+
+/* Nav items */
+.menu {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  margin-top: 52px;
+  padding: 0 0 10px 0;
+  clear: both;
+  background: var(--background-navbar);
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+/* Hamburger menu button */
+.menu-btn:checked ~ .menu {
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+/* Hamburger menbu text */
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color:#c9adc8;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu li {
+  padding: 15px 0;
+  margin: 0 54px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-btn:checked ~ .menu a,
+.menu-btn:checked ~ .menu li {
+  opacity: 1;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 24px 14px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.navicon {
+  background:#c9adc8;
+  display: block;
+  height: 5px;
+  width: 65px;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before,
+.navicon:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background:#c9adc8; 
+  transition: 0.3192s;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navicon:before {
+  top: 15px;
+}
+
+.navicon:after {
+  bottom: 15px;
+}
+
+
+/* Hamburger Menu Animation Start */
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before {
+  top: 0;
+}
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  bottom: 0;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+
+
+
+/* about */
+
+.about{
+  height: 800px;
+  margin-top: -52px;
+  padding-top: 52px;
+}
+
+.my_img{
+border-radius: 50%;
+width: 200px;
+height: 200px;
+}
+
+.about-img{
+  text-align: center;
+}
+
+
+
+.contents{
+  height: 2000px;
+  padding-top: 200px;
+  color: #EFAEEC;
+  
+}
+
+h1,h2,p{
+  text-align: center;
+}
+
+h1{
+  line-height: 160px;
+}
+
+h2{
+  font-size: 45px;
+}
+
+.contents-top{
+  height: 500px;
+  line-height: 500px;
+  font-size: 50px;
+  margin-bottom: 200px;
+}
+
+
+
+.works{
+  height: 800px;
+  margin-top: -52px;
+  padding-top: 52px;
+}
+
+.works_img{
+  width: 20vw;
+}
+
+.works_li{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  margin-top: 80px;
+  padding-inline-start: 0px;
+}
+
+
+
+.button{
+  color: azure;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color:#EFAEEC;
+}
+
+
+.contact{
+  height: 800px;
+  margin-top: -52px;
+  padding-top: 52px;
+}
+
+.contact_mail{
+  font-size: 30px;
+  color: #EFAEEC;
+
+}
+
+footer {
+  width: 100%;
+  height: 150px;
+  background-color:#EFAEEC;
+}
+
+footer p{
+  color:#251F57;
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+}
